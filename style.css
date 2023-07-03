@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+span, a {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.row {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 24px;
+}
+.boxes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.picbox {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.pic {
+    display: block;
+    transition: 0.2s transform linear;
+}
+.picbox:hover .pic {
+    transform: scale(1.1);
+}
+.time {
+    background-color: white;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.timeicon {
+    margin-right: 3px;
+}
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #666;
+    margin: 0 4px;
+}
+.name {
+    font-size: 27px;
+}
+.txt {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.link {
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    transition: 0.2s background-color linear;
+}
+.link:hover {
+    background-color: #666;
+}
+/* responsiveness */
+@media(max-width:1200px){
+    .row {
+        padding: 15px 20px;
+        grid-template-columns: 1fr 1.7fr 1fr;
+    }
+}
+@media(max-width:1000px){
+    .row {
+        grid-template-columns: 1fr;
+    }
+    .boxes {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .boxes .box {
+        width: 48.5%;
+    }
+    .col1 {
+        margin: 20px 0;
+    }
+    .col1 .box {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+@media(max-width:550px){
+    .row {
+        padding: 15px;
+    }
+    .boxes .box {
+        width: 100%;
+    }
+}
